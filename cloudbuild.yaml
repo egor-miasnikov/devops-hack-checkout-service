@@ -1,10 +1,10 @@
 steps:
   - name: 'gcr.io/hackaton2019-242912/sonar-scanner:latest'
-      args:
-      - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
-      - '-Dsonar.login=9cb3b7f0aad06c2fb913d3a633ab6c2c8565ce04'
-      - '-Dsonar.projectKey=checkout_service'
-      - '-Dsonar.sources=.'
+    args:
+    - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
+    - '-Dsonar.login=9cb3b7f0aad06c2fb913d3a633ab6c2c8565ce04'
+    - '-Dsonar.projectKey=checkout_service'
+    - '-Dsonar.sources=.'
   #step 1
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/hackaton2019-242912/checkoutservice', '.']
